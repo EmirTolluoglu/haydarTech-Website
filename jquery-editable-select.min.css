@@ -1,0 +1,48 @@
+/*! jQuery Editable Select - v2.2.5 - https://github.com/indrimuska/jquery-editable-select - (c) 2016 Indri Muska - MIT */
+input.es-input {
+  padding-right: 20px !important;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAICAYAAADJEc7MAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG2YAABzjgAA4DIAAIM2AAB5CAAAxgwAADT6AAAgbL5TJ5gAAABGSURBVHjaYvz//z8DOYCJgUzA0tnZidPK8vJyRpw24pLEpwnuVHRFhDQxMDAwMPz//x+OOzo6/iPz8WFGuocqAAAA//8DAD/sORHYg7kaAAAAAElFTkSuQmCC)
+    right center no-repeat;
+  width: 70%;
+}
+@media only screen and (min-width: 768px) {
+  input.es-input {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  input.es-input {
+    width: 20%;
+  }
+}
+input.es-input.open {
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-right-radius: 0;
+}
+.es-list {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  display: none;
+  z-index: 1000;
+  background: #fff;
+  max-height: 160px;
+  overflow-y: auto;
+  border-radius: 0 0 10px 10px;
+}
+.es-list li {
+  display: block;
+  padding: 5px 10px;
+  margin: 0;
+}
+.es-list li.selected {
+  background: #f3f3f3;
+}
+.es-list li[disabled] {
+  opacity: 0.5;
+}

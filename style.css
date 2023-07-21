@@ -1,0 +1,121 @@
+/* Import Google font - Poppins */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+:root {
+    --status-border-transform: 52%;
+    --status-border-transform-reverse: -52%;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+  }
+  html,body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: #353842;
+    box-sizing: border-box;
+  }
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    width: 350px;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 0 15px;
+    border: 3px solid #fff;
+    background: transparent;
+    color: #fff;
+    outline: none;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 19px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+input:focus~label,
+input:valid~label {
+    top: 0;
+    left: 15px;
+    font-size: 16px;
+    padding: 0 2px;
+    background: #353842;
+}
+
+.transform {
+    width: 200vw;
+    height: 200vw;
+    position: absolute;
+    animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+    animation-fill-mode: forwards;
+}
+
+.transform-wrong {
+    background-color: #ff4444;
+    transform: translate(var(--status-border-transform), var(--status-border-transform)) rotate(45deg);
+}
+
+.transform-success {
+    background-color: #00c851;
+    transform: translate(var(--status-border-transform-reverse), var(--status-border-transform-reverse)) rotate(45deg);
+}
+
+.transform-anim-sucsess {
+    animation: example 4s;
+}
+
+.transform-anim-wrong {
+    animation: example2 4s;
+}
+
+@keyframes example {
+    0% {
+        transform: translate(var(--status-border-transform-reverse), var(--status-border-transform-reverse)) rotate(45deg);
+    }
+    100% {
+        transform: translate(var(--status-border-transform), var(--status-border-transform)) rotate(45deg);
+    }
+}
+
+@keyframes example2 {
+    0% {
+        transform: translate(var(--status-border-transform), var(--status-border-transform)) rotate(45deg);
+    }
+    100% {
+        transform: translate(var(--status-border-transform-reverse), var(--status-border-transform-reverse)) rotate(45deg);
+    }
+}
+
+/* custom select box style  */
+input.es-input {
+    background-color: transparent !important;
+    border: #00c851;
+    outline: none;
+    border: 3px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    width: 100%;
+}
+
+.d-none {
+    display: none !important;
+}

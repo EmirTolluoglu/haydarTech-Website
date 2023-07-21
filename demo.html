@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery Editable Select Plugin Examples</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+        <link href="jquery-editable-select.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <select id="basic">
+            <option>Alfa Romeo</option>
+            <option>Audi</option>
+            <option>BMW</option>
+            <option>Citroen</option>
+            <option>Fiat</option>
+            <option>Ford</option>
+            <option>Jaguar</option>
+            <option>Jeep</option>
+            <option>Lancia</option>
+            <option>Land Rover</option>
+            <option>Mercedes</option>
+            <option>Mini</option>
+            <option>Nissan</option>
+            <option>Opel</option>
+            <option>Peugeot</option>
+            <option>Porsche</option>
+            <option>Renault</option>
+            <option selected="selected">Smart</option>
+            <option>Volkswagen</option>
+            <option>Volvo</option>
+        </select>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="jquery-editable-select.min.js"></script>
+        <script>
+      window.onload = function () {
+        $('#basic').editableSelect( {effects: "slide"} );
+        
+      }
+        </script>
+</body>
+</html>
